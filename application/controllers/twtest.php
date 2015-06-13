@@ -54,7 +54,9 @@ class Twtest extends CI_Controller {
 		$this->twconnect->twaccount_verify_credentials();
 
 		echo 'Authenticated user info ("GET account/verify_credentials"):<br/><pre>';
+		echo $this->twconnect->tw_user_info('name');
 		print_r($this->twconnect->tw_user_info); echo '</pre>';
+		//echo name
 		
 	}
 

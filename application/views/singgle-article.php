@@ -15,6 +15,7 @@
 								</p>
 								<br>
 								<div class="fb-share-button" data-href="<?php echo current_url(); ?>" data-layout="button_count"></div>
+								<a href="https://twitter.com/share" class="twitter-share-button" data-via="">Tweet</a>
 							</div>
 						</div>
 					</div>
