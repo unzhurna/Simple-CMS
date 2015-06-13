@@ -80,36 +80,6 @@ class Auth extends CI_Controller {
 		redirect('welcome');		
     }
 	
-	function twitter_login()
-	{
-		$user = $this->facebook->getUser();        
-        if($user) 
-		{
-            try 
-			{
-				////$data['user_profile'] = $this->facebook->api('/me');
-                $fb = $this->facebook->api('/me');
-				$this->session->set_userdata(array(
-					'logged_in'		=>TRUE,
-					'logged_from'	=> 'facebook',
-					'id'			=> $fb['id'],
-					'name'			=> $fb['name'],
-					'email'			=> $fb['email']
-				));
-				$this->auth_model->facebook_data($fb);
-            }
-			catch (FacebookApiException $e) 
-			{
-                $user = null;
-            }
-        }
-		else 
-		{
-            $this->facebook->destroySession();
-        }
-		
-    }
-	
 	function logout()
 	{
 		switch ($this->session->unset_userdata(logged_from)) { 

@@ -13,6 +13,7 @@
 								<p>
 									<?php echo $article['content']; ?>
 								</p>
+								<br>
 								<div class="fb-share-button" data-href="<?php echo current_url(); ?>" data-layout="button_count"></div>
 							</div>
 						</div>

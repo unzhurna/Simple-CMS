@@ -13,7 +13,8 @@
 								<p>
 									<?php echo $article['teaser']; ?><a href="<?php echo site_url('welcome/detail_article/'.$article['id']); ?>">more</a>
 								</p>
-								<div class="fb-share-button" data-href="http://fuf.me/cms" data-layout="button_count"></div>
+								<br>
+								<div class="fb-share-button" data-href="<?php echo site_url('welcome/detail_article/'.$article['id']); ?>" data-layout="button_count"></div>
 							</div>
 						</div>
 					</div>
