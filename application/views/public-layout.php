@@ -16,6 +16,16 @@
         <![endif]-->
     </head>
     <body class="full-width">
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=1451793178450014";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
         <section id="container">
             <!--header start-->
             <header class="header white-bg">
@@ -65,25 +75,7 @@
 							</section>
 						</div>   
                         <div class="col-lg-10">
-                            <section class="panel">
-                                <div class="panel-body profile-activity">
-									<?php foreach($articles as $article) : ?>
-									<div class="activity terques">
-                                        <span> <i class="icon-shopping-cart"></i> </span>
-                                        <div class="activity-desk">
-                                            <div class="panel">
-                                                <div class="panel-body">
-													<h4><a href=""><?php echo $article['title']; ?></a></h4>
-                                                    <p>
-                                                        <?php echo $article['content']; ?>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-									<?php endforeach ?>
-								</div>
-                            </section>
+                            <?php echo $content; ?>
                         </div>                                    
                     </div>
                     <!-- page end-->

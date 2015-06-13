@@ -10,16 +10,25 @@ class Welcome extends CI_Controller {
 
 	function index()
 	{
-		$data = array(
-			'articles'		=> $this->welcome_model->get_articles(),
-			'categories'	=> $this->welcome_model->get_categories()
-		);
+		$item['articles'] = $this->welcome_model->get_articles();
+		$data['categories'] = $this->welcome_model->get_categories();
+		$data['content'] = $this->load->view('list-articles', $item, TRUE);
 		$this->load->view('public-layout', $data);
 	}
 	
 	function article_base($id)
 	{
-		$data['categories'] = $this->welcome_model->get_category($id);
+		$item['articles'] = $this->welcome_model->get_base_articles($id);
+		$data['categories'] = $this->welcome_model->get_categories();
+		$data['content'] = $this->load->view('list-articles', $item, TRUE);
+		$this->load->view('public-layout', $data);
+	}
+	
+	function detail_article($id)
+	{
+		$item['articles'] = $this->welcome_model->get_article($id);
+		$data['categories'] = $this->welcome_model->get_categories();
+		$data['content'] = $this->load->view('singgle-article', $item, TRUE);
 		$this->load->view('public-layout', $data);
 	}
 
