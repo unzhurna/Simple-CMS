@@ -10,8 +10,8 @@
 			 "searchreplace wordcount visualblocks visualchars code insertdatetime media nonbreaking",
 			 "save table contextmenu directionality  template paste textcolor"
 		],
-		toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist  | link | print preview media",
-		document_base_url:"<?php echo config_item('domain_url'); ?>"
+		toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist  | link | print preview media"
+		//document_base_url:"<?php echo config_item('domain_url'); ?>"
 	});
 	
 	//Tags Input

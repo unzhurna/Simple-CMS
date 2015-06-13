@@ -37,14 +37,14 @@
         							<td width="50"><img src="<?php  echo config_item('domain_url').$row['img_icon']?>" alt="image"></td>
         							<td><?php echo (($row['caption']) ? $row['caption'] : '-')?></td>
         							<td width="120">
-        								<select class="form-control" id="size<?php echo $i; ?>" name="size">
+        								<select class="form-control" id="size_<?php echo $i; ?>" name="size">
             								<option value="<?php echo config_item('domain_url').$row['img_preview']; ?>"> Medium</option>
             								<option value="<?php echo config_item('domain_url').$row['img_full']; ?>"> Big</option>
             								<option value="<?php echo config_item('domain_url').$row['img_thumb']; ?>"> Small</option>
         								</select>
         							</td>
         							<td width="50">
-            							<a href="javascript:void(0)" class="btn" onclick="window.parent.insert_image($('#size<?php echo $i; ?>').val(),'<?php echo $row['img_full']; ?>')">        							
+            							<a href="#" class="btn" onclick="window.parent.insert_image($('#size_<?php echo $i; ?>').val(),'<?php echo $row['img_full']; ?>')">
             								<i class="icon-ok-circle"></i> 
             							</a> 
         							</td>

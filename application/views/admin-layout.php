@@ -24,7 +24,7 @@
 					<div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
 				</div>
 				<!--logo start-->
-				<a href="index.html" class="logo" >C<span>M</span>S</a>
+				<a href="#" class="logo" >C<span>M</span>S</a>
 				<!--logo end-->				
 				<div class="top-nav ">
 					<ul class="nav pull-right top-menu">

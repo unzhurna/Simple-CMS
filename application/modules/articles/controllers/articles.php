@@ -103,7 +103,6 @@ class Articles extends CI_Controller {
             );
             $this->article_model->submit_article($save);
             redirect('articles');
-			//echo print_r($save);
         }        
 		
 	}
