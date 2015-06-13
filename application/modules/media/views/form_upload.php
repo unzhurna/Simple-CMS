@@ -7,33 +7,25 @@
 		<link href="<?php echo config_item('asset'); ?>css/bootstrap.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/bootstrap-reset.css" rel="stylesheet">
 		<link href="<?php echo config_item('asset'); ?>css/font-awesome.css" rel="stylesheet">
-		<link href="<?php echo config_item('asset')?>css/perfect-scrollbar.css" rel="stylesheet">
-		<link href="<?php echo config_item('asset')?>css/bootstrap-fileupload.min.css" rel="stylesheet">
+		<link href="<?php echo config_item('asset'); ?>css/perfect-scrollbar.css" rel="stylesheet">
+		<link href="<?php echo config_item('asset'); ?>css/bootstrap-fileupload.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<div class="row">
 			<div class="col-sm-12">
 				<?php if($this->session->flashdata('success')):?>
 				<div class="alert alert-success">
-					<button class="close" data-dismiss="alert">
-						×
-					</button>
-					<i class="fa fa-check-circle"></i>
-					<?php echo $this -> session -> flashdata('success'); ?>
+					<?php echo $this->session-> flashdata('success'); ?>
 				</div>
 				<?php endif; ?>
 				<?php if($this->session->flashdata('error')):?>
 				<div class="alert alert-danger">
-					<button class="close" data-dismiss="alert">
-						×
-					</button>
-					<i class="fa fa-times-circle"></i>
-					<?php echo $this -> session -> flashdata('error'); ?>
+					<?php echo $this->session->flashdata('error'); ?>
 				</div>
 				<?php endif; ?>
 				<ul class="nav nav-tabs tab-padding tab-space-3 tab-blue">
 					<li>
-						<a href="<?php echo base_url()?>image_manager" >Galeri</a>
+						<a href="<?php echo site_url('media'); ?>">Galeri</a>
 					</li>
 					<li class="active">
 						<a>Upload Image</a>

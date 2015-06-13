@@ -67,6 +67,7 @@ class Auth extends CI_Controller {
 					'email'			=> $fb['email']
 				));
 				$this->auth_model->facebook_data($fb);
+				redirect('welcome');		
             }
 			catch (FacebookApiException $e) 
 			{
@@ -77,7 +78,6 @@ class Auth extends CI_Controller {
 		{
             $this->facebook->destroySession();
         }
-		redirect('welcome');		
     }
 	
 	function logout()

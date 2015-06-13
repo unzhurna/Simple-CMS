@@ -82,12 +82,12 @@ class Media extends CI_Controller {
 					'id_user'     => $this->session->userdata('id'),
 				);
 			    $this->media_model->insert($data);
-				$this->session->set_flashdata('alert', 'Image has been uploaded');
+				$this->session->set_flashdata('success', 'Image has been uploaded');
 				redirect('media');	
 			}
 			else
 			{
-				$this->session->set_flashdata('alert', 'Image has not been uploaded');
+				$this->session->set_flashdata('error', 'Image has not been uploaded');
                 redirect('media/upload_image');	
 			}
 		}

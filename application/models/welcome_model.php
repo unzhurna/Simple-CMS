@@ -25,7 +25,7 @@ class Welcome_model extends CI_Model {
 	
 	function get_article($id)
 	{
-		$result = $this->db->get('articles', array('id', $id));
+		$result = $this->db->get_where('articles', array('id'=> $id));
 		return $result;
 	}
 	

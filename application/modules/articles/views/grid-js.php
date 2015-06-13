@@ -72,10 +72,10 @@
 			url = '<?php echo site_url('articles/unpublish'); ?>';
 		}
 		if(act=='delete') {
-			if(ex!=true) {
+			/* if(ex!=true) {
 				myConfirm('Are you sure want to delete?');
 				return false;
-			}
+			} */
 			url = '<?php echo site_url('articles/delete'); ?>';
 		}
 		var list_id = [];

@@ -7,21 +7,21 @@
 		<link href="<?php echo config_item('asset'); ?>css/bootstrap.css" rel="stylesheet">
         <link href="<?php echo config_item('asset'); ?>css/bootstrap-reset.css" rel="stylesheet">
         <link href="<?php echo config_item('asset'); ?>css/font-awesome.css" rel="stylesheet">
-		<link href="<?php echo config_item('asset')?>css/perfect-scrollbar.css" rel="stylesheet">
+		<link href="<?php echo config_item('asset'); ?>css/perfect-scrollbar.css" rel="stylesheet">
 	</head>
 	<body>
     	<div class="row">
             <div class="col-sm-12">
     			<?php if($this->session->flashdata('success')):?>
-    			<div class="alert alert-success">
-    				<?php echo $this->session->flashdata('success'); ?>
-    			</div>
-    			<?php endif; ?>
-    			<?php if($this->session->flashdata('error')):?>
-    			<div class="alert alert-danger">
-    				<?php echo $this->session->flashdata('error'); ?>
-    			</div>
-    			<?php endif; ?>    			
+				<div class="alert alert-success">
+					<?php echo $this->session-> flashdata('success'); ?>
+				</div>
+				<?php endif; ?>
+				<?php if($this->session->flashdata('error')):?>
+				<div class="alert alert-danger">
+					<?php echo $this->session->flashdata('error'); ?>
+				</div>
+				<?php endif; ?>    			
     			<ul class="nav nav-tabs tab-padding tab-space-3 tab-blue">
                     <li class="active"><a>Galeri</a></li>
                     <li><a href="<?php echo site_url('media/upload_image')?>" >Upload Image</a></li>
@@ -64,7 +64,7 @@
     	</div>
     	<script src="<?php echo config_item('asset'); ?>js/jquery.js"></script>
         <script src="<?php echo config_item('asset'); ?>js/bootstrap.js"></script>
-    	<script src="<?php echo config_item('asset')?>js/perfect-scrollbar.js"></script>
+    	<script src="<?php echo config_item('asset'); ?>js/perfect-scrollbar.js"></script>
     </body>    
     <script>
 		$(document).ready(function() {

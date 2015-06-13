@@ -8,6 +8,11 @@ class Categories extends CI_Controller {
 		$this->load->model('category_model');
 		$this->load->helper('form');
 		$this->load->library('form_validation');
+		if(!$this->session->userdata('logged_in'))
+		{
+			show_404();
+			exit;
+		}
 	}
 
 	function index()

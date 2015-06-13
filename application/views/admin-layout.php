@@ -30,7 +30,7 @@
 					<ul class="nav pull-right top-menu">
 						<!-- user login dropdown start-->
 						<li class="dropdown language">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#"><img alt="" src="<?php echo config_item('asset'); ?>img/avatar1_small.jpg"> <span class="username"><?php echo $this->session->userdata('name'); ?></span> <b class="caret"></b></a>
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="username"><?php echo $this->session->userdata('name'); ?></span> <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li>
 									<a href="<?php echo site_url('welcome'); ?>" target="_blank"><i class="icon-globe"></i> View Site</a>
