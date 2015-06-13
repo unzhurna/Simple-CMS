@@ -74,7 +74,7 @@ class Twconnect extends TwitterOAuth {
 		
 		$ci =& get_instance();
 		$ci->config->load('twitter', true);
-		$config = $ci->config->item('twitter');
+		$config = $ci->config->item('socials');
 
 		/* Try to retrieve user access token (permanent) from session */
 		$access_token = $ci->session->userdata('tw_access_token');

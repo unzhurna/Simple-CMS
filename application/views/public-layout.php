@@ -67,69 +67,22 @@
                         <div class="col-lg-10">
                             <section class="panel">
                                 <div class="panel-body profile-activity">
-                                    <div class="activity terques">
+									<?php foreach($articles as $article) : ?>
+									<div class="activity terques">
                                         <span> <i class="icon-shopping-cart"></i> </span>
                                         <div class="activity-desk">
                                             <div class="panel">
                                                 <div class="panel-body">
-                                                    <div class="arrow"></div>
-                                                    <i class=" icon-time"></i>
-                                                    <h4>10:45 AM</h4>
+													<h4><a href=""><?php echo $article['title']; ?></a></h4>
                                                     <p>
-                                                        Purchased new equipments for zonal office setup and stationaries.
+                                                        <?php echo $article['content']; ?>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="activity alt purple">
-                                        <span> <i class="icon-rocket"></i> </span>
-                                        <div class="activity-desk">
-                                            <div class="panel">
-                                                <div class="panel-body">
-                                                    <div class="arrow-alt"></div>
-                                                    <i class=" icon-time"></i>
-                                                    <h4>12:30 AM</h4>
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet consiquest dio
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="activity blue">
-                                        <span> <i class="icon-bullhorn"></i> </span>
-                                        <div class="activity-desk">
-                                            <div class="panel">
-                                                <div class="panel-body">
-                                                    <div class="arrow"></div>
-                                                    <i class=" icon-time"></i>
-                                                    <h4>10:45 AM</h4>
-                                                    <p>
-                                                        Please note which location you will consider, or both. Reporting to the VP  you will be responsible for managing..
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="activity alt green">
-                                        <span> <i class="icon-beer"></i> </span>
-                                        <div class="activity-desk">
-                                            <div class="panel">
-                                                <div class="panel-body">
-                                                    <div class="arrow-alt"></div>
-                                                    <i class=" icon-time"></i>
-                                                    <h4>12:30 AM</h4>
-                                                    <p>
-                                                        Please note which location you will consider, or both.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
+									<?php endforeach ?>
+								</div>
                             </section>
                         </div>                                    
                     </div>

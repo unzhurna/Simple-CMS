@@ -115,15 +115,12 @@ class Auth extends CI_Controller {
 		switch ($this->session->unset_userdata(logged_from)) { 
 			case 'facebook': 
 				$this->facebook->destroySession();
-				$this->session->unset_userdata(logged_in);
 			break;
 			case 'twitter': 
 				$this->facebook->destroySession();
-				$this->session->unset_userdata(logged_in);
 			break;
-			default:
-				$this->session->unset_userdata(logged_in);
 		}
+		$this->session->unset_userdata(logged_in);
 		$this->session->set_flashdata('alert', 'Success! You have logout.');
 		redirect('/');
     }

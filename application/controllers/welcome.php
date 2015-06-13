@@ -10,7 +10,10 @@ class Welcome extends CI_Controller {
 
 	function index()
 	{
-		$data['categories'] = $this->welcome_model->get_categories();
+		$data = array(
+			'articles'		=> $this->welcome_model->get_articles(),
+			'categories'	=> $this->welcome_model->get_categories()
+		);
 		$this->load->view('public-layout', $data);
 	}
 	
