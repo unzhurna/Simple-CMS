@@ -80,6 +80,23 @@ class Auth extends CI_Controller {
         }
     }
 	
+	function twitter_login()
+	{
+		$ok = $this->twconnect->twredirect('auth/callback');
+		if (!$ok) 
+		{
+			echo 'Could not connect to Twitter. Refresh the page or try again later.';
+		}
+	}
+
+	public function callback()
+	{
+		$ok = $this->twconnect->twprocess_callback();
+		
+		if ( $ok ) { redirect('welcome'); }
+			else redirect ('twtest/failure');
+	}
+	
 	function logout()
 	{
 		switch ($this->session->unset_userdata(logged_from)) { 

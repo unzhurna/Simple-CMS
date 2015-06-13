@@ -36,7 +36,7 @@
 					</p>
 					<div class="login-social-link">
 						<a href="https://www.facebook.com/dialog/oauth?client_id=1451793178450014&amp;redirect_uri=http%3A%2F%2Ffuf.me%2Fcms%2Fauth%2Ffacebook_login&amp;state=6203a466199bf081f1e44cfccaa7669e&amp;sdk=php-sdk-3.2.3&amp;scope=email" class="facebook"><i class="icon-facebook"></i> Facebook</a>
-						<a href="" class="twitter"> <i class="icon-twitter"></i> Twitter </a>
+						<a href="<?php echo site_url('twtest'); ?>" class="twitter"> <i class="icon-twitter"></i> Twitter </a>
 					</div>
 				</div>
 			<?php echo form_close(); ?>
